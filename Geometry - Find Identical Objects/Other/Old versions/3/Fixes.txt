@@ -1,0 +1,13 @@
+
+GJØRE SHAPE-FUNKSJONEN RASKERE:
+
+ALT 1: Den må markere vertices som den allerede har sjekket og matchet, slik at den ikke sjekker den samme på nytt igjen. Husk å lage en liste på forhånd med antall plasser
+
+ALT 2: Du kan også samle antall xyz-posisjoner i original object og i copy object i hver sin liste. Den løper igjennom liste A og finner matchende vertices i liste B. Du kan også gjøre om point3-verdiene til et bit-array som du kan sammenligne. Dette bør gå raskere enn å sjekke point3-verdier. Prøv også implementere sort-funksjoner på listene for å gjøre det mer sannsynlig å treffe tidligere.
+Du kan også sammenligne listene med sort-funksjonen. Dette bør gå raskere enn funksjonen du har der nå
+
+------------------------------------------------------------------------------------
+*Lett til en "get selection" eller "get objects"-knapp. Det er for tilfellene hvor du ikke vil gjøre noe før du har sett objektene, men så man slipper å beholde selection som scriptet setter eller lage et object set
+
+*Face normals og face smoothing groups er avhengig av nummereringen av faces. Det betyr at et objekt kan være klin likt, men faces er bygd opp i forskjellig rekkefølge. Et slikt objekt vil se ut som det ikke er likt fra scriptet sin side fordi den nummereringen av faces er forskjellig.
+Løsningen er at hver face er nødt til å finne sine vertices, finne vertices på potential_copy med samme posisjoner, og sjekke facen som de har seg i mellom

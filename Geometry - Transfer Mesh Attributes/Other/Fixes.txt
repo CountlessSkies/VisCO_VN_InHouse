@@ -1,0 +1,2 @@
+*Gjør scriptet mer tolerant. Du skal fremdeles ha en transfer from og en transfer to- knapp, men scriptet skal kunne jobbe selv om det er overlappende sett. Det skal finne sin kopi vha. navn, antall vertices osv. Så kan det heller si ifra hvis et objekt har flere lignende objekter, eller om det ikke har noen objekter å overføre til i det hele tatt osv.
+Bruk Find similar objects"-scriptet som en mal

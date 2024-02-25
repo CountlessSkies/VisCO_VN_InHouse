@@ -1,0 +1,35 @@
+*lag et valg for om "done"-beskjeden skal dukke opp eller ikke
+
+*Må ha en funksjon hvor man kan skrive en matID eller en liste med matID´er, og få en liste over objekter som har disse ID´ene. Prøv å bruke det allerede eksisterende interfacet
+
+*Når man kjører matID UVW bypass, så kommer advarselen om at dette kan påvirke modifiere høyere opp i stacken. Denne må disables
+
+*Scriptet er enda til tider tregt. Sjekk at alt av viewport-oppdateringer etc. ikke skjer mens scriptet kjører. Modellen(e) skal heller ikke oppdateres før på slutten.
+Sjekk denne linken:
+http://docs.autodesk.com/3DSMAX/16/ENU/MAXScript-Help/index.html?url=files/GUID-0030AA3F-47D9-4FDD-8517-5F7902884B37.htm,topicNumber=d30e96434
+
+Se om dette kan hjelpe på hastighetsproblemet:
+"That's because you operate on live .mesh object, never do that. If you instead do it properly and use snapshotAsMesh instead (which is what the MaxPlus version does with Object.Eval), maxscript version will be about two times faster than the MaxPlus one. Oh, and if you care about performance, instead of allocating arrays with for vertex in #(1,2,3) use for vertex = 1 to 3."
+Lenke: https://www.reddit.com/r/3dsmax/comments/97nba9/python_for_3ds_max/
+
+*Man skal kunne jobbe på serier med matIDs. Det betyr at man må enkelt kunne for eks. si at matID 1-23 skal få matID 14, uten at man behøver å taste inn hver enkelt id fra 1 til 23. Dette gjelder både når man bruker spinnere OG i tabellen
+
+*Modifiere som var deaktivert før opType 4 kjøres, må deaktiveres igjen etter at den er ferdig
+
+*Skal kunne jobbe på splines
+
+*Alle objekter som ikke er edit_poly eller edit_mesh, eller har modifiere, skal få en edit poly modifier på toppen, og endringer i materialer skal skje i denne modifieren
+
+*Legg til et valg for å kun jobbe på baseobjekter. Dette er nødvendig inntil andre script er kompatible på den måten at de også kan jobbe på edit_poly på toppen av objektet, ikke kun på baseobjektet. Dette gjelder scriptene Collect Scene Materials, Change Face Material IDs, Separate materials og Break or Merge by Materials
+
+*Flytt koden til flere mxs-dokumenter for å rydde opp
+
+*Tooltips
+
+*Hva skjer når man velger å sette opp en liste, og man setter string el. som enten gammel eller ny verdi? Sett opp en liste med test-cases for å se at alt fungerer som det skal.
+
+*Scriptet skal kunne gjøre operasjonene det nå kan gjøre, men på forskjellige modifiere, ikke kun fra bånn av stacken
+
+*Hvis scriptet prøver å close 3dsmax, så vil den stoppe hvis det er ulagrede script i editoren. Dette må den overkjøre
+
+*Alle script som har lagring etter fullføring som alternativ, skal ha den nåværende lagringsbanen for filen som er åpnet, som forslag. De kan gjerne også ha det nåværende filnavnet, pluss et tillegg for å lagre en ny fil. Kanskje du til og med kan kutte ut filbanen fullstendig, og ha det overnevnte som fast rutine

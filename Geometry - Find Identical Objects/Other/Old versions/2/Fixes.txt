@@ -1,0 +1,3 @@
+*Et search parameter skal være "any", slik at alle valgte objekter blir med. Det er kjekt når du vil instance objekter som kanskje ikke er 100% like, men hvor du ønsker å forenkle scenen ved å gjøre dem like
+
+*Er det mulig at når scriptet sammenligner posisjoner til vertices i "Relative vertices positions", så må den ha korrekt rekkefølge på vertices for å fungerer? Si at modellen bygges opp i en annen rekkefølge og nummereringen på vertices endres - vil dette da gjøre funksjonen ubrukelig? Alternativt må den sjekke om det finnes en hvilken som helst piksel på den samme posisjonen

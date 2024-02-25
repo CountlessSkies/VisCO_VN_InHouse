@@ -1,0 +1,13 @@
+*Når du konverterer til poly eller mesh, så må du kunne velge å kjøre på objekter som allerede er poly eller mesh. Det kan hende du ønsker å behandle alle objekter og deres modifiere likt, eller det kan være du ønsker å gjøre edges visible eller ikke
+
+*Om scriptet står til å bake eller maintain modifiere og objektet den jobber på er et reference, så vil disse modifierne bakes eller maintaines på objekter som er instance av dette objektet. Dette skjer til tross for at modifierne over reference-linja skal være unike og ikke ligge på objekter som er et instance.
+For å fremprovosere dette må du lage et instance av et object, deretter lage et referense av det FØRSTE objektet som ble laget, deretter legge en modifier over reference-linja. Når du baker eller maintainer, så vil denne modifieren legges på alle objekter som er et instance.
+
+*modifiere over reference-linja må ikke legges på felles på alle objektene. De må heller slettes. Problemet er å identifisere objekter som er et reference, og hvor reference-linja ligger i modifier stacken.
+VIL IKKE FUNGERE: Dette kan fikses ved å slette alle modifiere som er unike, dvs. ikke eksisterer på noen andre objekter
+
+*kan man ta vare på references-linja og modifiere over den?
+
+http://forums.cgsociety.org/archive/index.php?t-849502.html
+
+http://forums.cgsociety.org/showthread.php?p=6896664#post6896664

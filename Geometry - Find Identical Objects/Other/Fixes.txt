@@ -1,0 +1,16 @@
+---------------------------------------------------------------------------------------------
+FIKS:
+
+*Problemstilling: Et objekt kan ha samme posisjon som et kopi-objekt, men kopien har allikevel en annen rotasjon.
+Problemet er at hvis et objekt er rotert slik så skal det mest sannsynlig ikke slettes, men det kan allikevel være et ønske om å instance det.
+For å sjekke om et objekt er rotert eller ligger over et annet så kan man sjekke rotasjonsverdiene. Dette må være en separat avhukning.
+
+*Objekter som er jobbet på skal samles i to lister: en med originals og en med copies. Dette er reduserende lister, dvs. jo flere parametere, jo mindre blir copies-lista Det skal IKKE være en liste til objekter som har kvalifisert hver parameter, fordi noe av poenget er å kunne legge til flere parametere for å redusere søketiden
+
+*Action-delen skal forandres:
+Hver action skal ha en knapp slik at brukeren først kan se selection, deretter velge hva han vil gjøre. Det skal ikke være behov for å lage instances eller slette objekter før man har sett hvilke det er.
+Det skal fremdeles være avhukninger fordi dette trengs hvis brukeren ønsker å lagre scenen med en gang. Scriptet kan jo bruke lang tid på å kjøre, så det må være mulighet til å beholde objektene
+
+*Hvis hverken originals-lista, search set-lista eller tolerance er forandret, og brukeren vil søke på nytt, så trenger den ikke å søke på parametere den allerede har søkt på. Du kan for eks. lage en liste som lister alle funksjonene som er brukt
+
+---------------------------------------------------------------------------------------------

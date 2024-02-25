@@ -1,0 +1,3 @@
+*Alle objekter som ikke er edit_poly eller edit_mesh, eller har modifiere, skal få en edit poly modifier på toppen, og endringer i materialer skal skje i denne modifieren
+
+*Legg til et valg for å kun jobbe på baseobjekter. Dette er nødvendig inntil andre script er kompatible på den måten at de også kan jobbe på edit_poly på toppen av objektet, ikke kun på baseobjektet. Dette gjelder scriptene Collect Scene Materials, Change Face Material IDs, Separate materials og Break or Merge by Materials
